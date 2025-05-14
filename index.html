@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<head>
+    <title>VOLUNTEER CONNECT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body>
+
+
+    <header>
+        <h1>Volunteer Connect</h1>
+        <nav>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="events.html">Browse Events</a>
+            <a href="reviews.html">Leave a Review</a>
+            <button id="logout" style="display: none;">Logout</button>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to Volunteer Connect</h2>
+        <p>Connect with your communuity by volunteering for local events!</p>
+    </main>
+    <footer>
+        <div class="footer-wave"></div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Volunteer Connect</h3>
+                <p>Connectng passionate volunteers with meaningukl oppurtunities since 2025. join our mission to make a difference in communities worldwide</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Volunteer Oppurtunities</a>
+                    </li> <li>
+                        <a href="#">Organizations</a>
+                    </li> <li>
+                        <a href="#">Success stories</a>
+                    </li> <li>
+                        <a href="#">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>
+                        Email: info@volunterconnect.org
+                    </li>
+                    <li>
+                       Address: 123 abuja, nigeria
+                    </li>
+                    <li>
+                      Hours: Mon-Fri 9am-5pm
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Stay connected</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                </div>
+                <div class="newsletter">
+                    <h3>Newsletter</h3>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        if(localStorage.getItem('sessionToken')){
+            document.getElementById('logout').style.display ='inline';
+        }
+        document.getElementById('logout').addEventListener('click', logout);
+
+        document.getElementById('newsletter-form').addEventListener('submit', function(e){
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+
+            //simple email validation
+            if (/^\S+@\S+\.\S+$/.test(email)) {
+                alert('Thank you for subscribing to volunteer Connect!');
+                this.reset();
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+
+        //Add hover animation to footer sections
+        const footerSections = document.querySelectorAll('.footer-section');
+        footerSections.forEach(section => 
+        {
+            section.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+
+            section.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+
+            });
+
+        });
+    </script>
+</body>

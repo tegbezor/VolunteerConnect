@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+    <title>Leave a Review- Volunteer Connect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    
+</head>
+<body>
+    
+    <header>
+        <h1>Leave a Review</h1>
+        <a href="index.html">Back To Home</a>
+    </header>
+    <main>
+        <form id="reviewForm">
+            <label for="eventid">Event ID:</label>
+            <input type="number"
+            id="eventid" required>
+            <label for="rating:">Rating (1-5):</label>
+            <input type="number"
+            id="rating" min="1" max="5" required>
+            <button type="submit">Submit Review</button>
+        </form>
+        <p id="reviewMessage"></p>
+    </main>
+    <footer>
+        <div class="footer-wave"></div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Volunteer Connect</h3>
+                <p>Connectng passionate volunteers with meaningukl oppurtunities since 2025. join our mission to make a difference in communities worldwide</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Volunteer Oppurtunities</a>
+                    </li> <li>
+                        <a href="#">Organizations</a>
+                    </li> <li>
+                        <a href="#">Success stories</a>
+                    </li> <li>
+                        <a href="#">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>
+                        Email: info@volunterconnect.org
+                    </li>
+                    <li>
+                       Address: 123 abuja, nigeria
+                    </li>
+                    <li>
+                      Hours: Mon-Fri 9am-5pm
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Stay connected</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                </div>
+                <div class="newsletter">
+                    <h3>Newsletter</h3>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+    </script>
+</body>
+</html>
